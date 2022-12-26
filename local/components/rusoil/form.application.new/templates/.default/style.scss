@@ -1,0 +1,92 @@
+$base-color: #17a2b8;
+$base-color-hover: #10899d;
+$white-color: #ffffff;
+
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+
+  > label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .form-control:focus {
+    border-color: $base-color;
+    box-shadow: 0 0 0 0.1rem $base-color;
+  }
+
+  .form-check-input {
+    outline: none;
+  }
+  .form-check-input:checked {
+    background-color: $base-color;
+    border-color: $base-color;
+  }
+
+  @media(min-width: 992px) {
+    &__adaptive {
+      max-width: 50%;
+    }
+  }
+}
+
+button[type=submit] {
+  border-color: $base-color;
+  background-color: $base-color;
+  color: $white-color;
+}
+button[type=submit]:hover,
+button[type=submit]:focus,
+button[type=submit]:active
+{
+  border-color: $base-color-hover;
+  background-color: $base-color-hover;
+  color: $white-color;
+}
+
+.application-elements {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__row {
+    display: flex;
+    align-items: flex-end;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &:not(:first-child) {
+      label {
+        @media(min-width: 1200px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__line {
+    flex: 1;
+    padding-right: 15px;
+  }
+
+  &__btns {
+    display: flex;
+    margin-bottom: 5px;
+  }
+
+  &__btn {
+    padding-left: 5px;
+  }
+
+  &__btn svg {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+  }
+}
